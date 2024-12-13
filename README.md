@@ -35,7 +35,23 @@ total_budget
 24649428
 ````
 
-Additionally, we can see that overall a little over half of the schools are preforming with passing grades in both reading and math scores. We can see from our distinction of charter and distric school, that charter schools generally have a smaller population of students compared to district schools. Additionally we can see charter schools like Cabrera High School and Griffin High School had higher math and reading scores comapared to district schools like Bailey High School Figueroa High School respectively. From this we can conclude that there is not a direct correlation between per student budget and avergae score preformance for reading and math scrores. Furhter more we may conclude that the type of school (i.e. District and charter school) is directly associated with a students score preformance. Looking at the highest preforming school by % overall passing, our conclusion that success rate is directly correlated with charter schools is proven since the top 5 schools in this analysis are charter schools.
+<p>Additionally, we can see that overall over half of the schools are preforming with passing grades in both reading and math scores.</p>
+'''
+# Use the following to calculate the percentage of students who passed math (math scores greather than or equal to 70)
+passing_math_count = school_data_complete[(school_data_complete["math_score"] >= 70)].count()["student_name"]
+passing_math_percentage = float(passing_math_count / float(student_count) * 100)
+passing_math_percentage
+74.9808526933878
+# Calculate the percentage of students who passed reading (hint: look at how the math percentage was calculated)
+passing_reading_count = school_data_complete[school_data_complete['reading_score']>= 70].count()['student_name']
+passing_reading_percentage = float(passing_reading_count / float(student_count) *100)
+passing_reading_percentage
+85.80546336482001
+''''
+
+<p> We can see from our distinction of charter and distric school, that charter schools generally have a smaller population of students compared to district schools. Additionally we can see charter schools like Cabrera High School and Griffin High School had higher math and reading scores comapared to district schools like Bailey High School Figueroa High School respectively. From this we can conclude that there is not a direct correlation between per student budget and avergae score preformance for reading and math scrores. Furhter more we may conclude that the type of school (i.e. District and charter school) is directly associated with a students score preformance. Looking at the highest preforming school by % overall passing, our conclusion that success rate is directly correlated with charter schools is proven since the top 5 schools in this analysis are charter schools. </p>
+<img width="801" alt="image" src="https://github.com/user-attachments/assets/d073eea9-68d6-4672-8111-952ce1a392e4" />
+
 
 ## Data Source 
 1. Resources/schools_complete.csv
