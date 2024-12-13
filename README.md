@@ -36,6 +36,7 @@ total_budget
 ````
 
 <p>Additionally, we can see that overall over half of the schools are preforming with passing grades in both reading and math scores.</p>
+
 ```
 # Use the following to calculate the percentage of students who passed math (math scores greather than or equal to 70)
 passing_math_count = school_data_complete[(school_data_complete["math_score"] >= 70)].count()["student_name"]
